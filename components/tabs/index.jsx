@@ -1,4 +1,4 @@
 import { Tabs } from 'antd'
 
-export const { Step } = Tabs
+export const { TabPane } = Tabs
 export default Tabs
