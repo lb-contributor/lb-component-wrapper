@@ -1,18 +1,14 @@
 .lb-query-table-actions {
   overflow:hidden;
   margin-bottom: 16px;
+.lb-query-table-actions .left {
+  float: left;
+}
 
-  .left {
-    float: left;
-  }
+.lb-query-table-actions .right {
+  float: right;
+}
 
-  .right {
-    float: right;
-  }
-
-  button {
-    &:not(:last-child) {
-      margin-right: 8px;
-    }
-  }
+.lb-query-table-actions button:not(:last-child) {
+  margin-right: 8px;
 }

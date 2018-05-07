@@ -1,0 +1,20 @@
+{
+  "parser"  : "babel-eslint",
+  "extends" : [
+    "airbnb"
+  ],
+  "plugins" : [
+  ],
+  "env"     : {
+    "browser" : true
+  },
+  "globals" : {
+  },
+  "rules": {
+    "semi" : [0, "never"],
+    "no-unexpected-multiline": "error",
+    "max-len": [2, 1200, 2],
+    "react/forbid-prop-types": "off",
+    "class-methods-use-this": "off"
+  }
+}

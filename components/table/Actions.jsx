@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Button } from 'antd'
 import { shallowCompareArr } from '../utils/compare'
-import './Actions.scss'
+import './Actions.css'
 import ActionButton from './ActionButton'
 
 class Actions extends Component {
