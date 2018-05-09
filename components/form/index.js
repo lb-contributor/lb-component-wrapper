@@ -18,14 +18,17 @@ export class SimpleFormItem extends Form.Item {
       return true
     }
 
-    const ret = this.newGetChildProps(this.props, VALUE) !== this.newGetChildProps(nextProps, VALUE) ||
+    const willChange = nextProps.willChange || []
+    const changed = willChange.some(p => this.newGetChildProps(this.props, p) !== this.newGetChildProps(nextProps, p))
+
+    return changed ||
+      this.newGetChildProps(this.props, VALUE) !== this.newGetChildProps(nextProps, VALUE) ||
       this.newGetChildProps(this.props, OPTIONS) !== this.newGetChildProps(nextProps, OPTIONS) ||
       this.newGetChildProps(this.props, CHECKED) !== this.newGetChildProps(nextProps, CHECKED) ||
       currField.validating !== nextField.validating ||
       currField.value !== nextField.value ||
       currField.error !== nextField.error ||
       currField.initialValue !== nextField.initialValue
-    return ret
   }
 
   newGetChildProps = (props, prop) => {
