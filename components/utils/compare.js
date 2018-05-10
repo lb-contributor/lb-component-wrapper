@@ -43,6 +43,7 @@ export function shallowCompareArr(curr, next) {
 
 export function formBaseCompare(thisProps, nextProps) {
   return (thisProps.disabled === nextProps.disabled) &&
+    thisProps.read === nextProps.read &&
     thisProps.checked === nextProps.checked &&
     (Array.isArray(thisProps.value) && Array.isArray(nextProps.value) ? shallowCompareArr(thisProps.value, nextProps.value) : thisProps.value === nextProps.value)
 }
