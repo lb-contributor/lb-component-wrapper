@@ -8,9 +8,21 @@ class SelectWrapper extends Component {
     return !formBaseCompare(this.props, nextProps) ||
       !shallowCompareArr(this.props.options, nextProps.options)
   }
+
   render() {
-    console.log('----render SelectWrapper----')
-    const { options, ...props } = this.props
+    const { options, read, ...props } = this.props
+    if (read) {
+      if (options) {
+        for (let i = 0; i < options.length; i += 1) {
+          if (options[i].value === this.props.value) {
+            return (<span>{options[i].label}</span>)
+          }
+        }
+      }
+
+      return this.props.value
+    }
+
     return options ? (
       <Select {...props}>
         {

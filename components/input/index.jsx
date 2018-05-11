@@ -9,6 +9,10 @@ class InputWrapper extends Component {
   }
 
   render() {
+    if (this.props.read) {
+      return (<span>{this.props.value}</span>)
+    }
+
     return (<Input {...this.props} />)
   }
 }
