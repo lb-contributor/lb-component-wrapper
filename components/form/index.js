@@ -22,7 +22,7 @@ export class SimpleFormItem extends Form.Item {
     const changed = willChange.some(p => this.newGetChildProps(this.props, p) !== this.newGetChildProps(nextProps, p))
 
     return changed ||
-      this.state.helpShow !== nextState.helpShow ||
+      // this.state.helpShow !== nextState.helpShow ||
       this.newGetChildProps(this.props, VALUE) !== this.newGetChildProps(nextProps, VALUE) ||
       this.newGetChildProps(this.props, OPTIONS) !== this.newGetChildProps(nextProps, OPTIONS) ||
       this.newGetChildProps(this.props, CHECKED) !== this.newGetChildProps(nextProps, CHECKED) ||
