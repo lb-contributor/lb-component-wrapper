@@ -5,7 +5,8 @@ import { Button } from 'antd'
 class ButtonWrapper extends Component {
   shouldComponentUpdate(nextProps) {
     return this.props.disabled !== nextProps.disabled ||
-      this.props.loading !== nextProps.loading
+      this.props.loading !== nextProps.loading ||
+      this.props.onClick !== nextProps.onClick
   }
 
   render() {
@@ -15,7 +16,8 @@ class ButtonWrapper extends Component {
 
 ButtonWrapper.propTypes = {
   disabled: PropTypes.bool,
-  loading: PropTypes.bool
+  loading: PropTypes.bool,
+  onClick: PropTypes.func,
 }
 
 export default ButtonWrapper
