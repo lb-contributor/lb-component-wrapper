@@ -21,15 +21,22 @@ export class SimpleFormItem extends Form.Item {
     const willChange = nextProps.willChange || []
     const changed = willChange.some(p => this.newGetChildProps(this.props, p) !== this.newGetChildProps(nextProps, p))
 
-    return changed ||
-      // this.state.helpShow !== nextState.helpShow ||
+    const ret = changed ||
+      this.helpShow !== this.lastHelpShow ||
+      this.props.read !== nextProps.read ||
       this.newGetChildProps(this.props, VALUE) !== this.newGetChildProps(nextProps, VALUE) ||
       this.newGetChildProps(this.props, OPTIONS) !== this.newGetChildProps(nextProps, OPTIONS) ||
       this.newGetChildProps(this.props, CHECKED) !== this.newGetChildProps(nextProps, CHECKED) ||
       currField.validating !== nextField.validating ||
       currField.value !== nextField.value ||
-      currField.error !== nextField.error ||
+      currField.errors !== nextField.errors ||
       currField.initialValue !== nextField.initialValue
+    // 我不知道为什么在这里this.state为null
+    // 而且this.state.helpShow跑到了this里
+    // 之前写的this.state.helpShow !== nextState.helpShow会抛空指针异常
+    // 所以就有了现在这种写法
+    this.lastHelpShow = this.helpShow === this.lastHelpShow ? this.helpShow : this.helpShow
+    return ret
   }
 
   newGetChildProps = (props, prop) => {
