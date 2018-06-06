@@ -3,16 +3,13 @@ import { Input } from 'antd'
 import { formBaseCompare } from '../utils/compare'
 
 export const { Search, Group } = Input
+export const OriginalInput = Input
 class InputWrapper extends Component {
   shouldComponentUpdate(nextProps) {
     return !formBaseCompare(this.props, nextProps)
   }
 
   render() {
-    if (this.props.read) {
-      return (<span>{this.props.value}</span>)
-    }
-
     return (<Input {...this.props} />)
   }
 }
