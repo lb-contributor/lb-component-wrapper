@@ -31,7 +31,9 @@ export class SimpleFormItem extends Form.Item {
       currField.validating !== nextField.validating ||
       currField.value !== nextField.value ||
       currField.errors !== nextField.errors ||
-      currField.initialValue !== nextField.initialValue
+      currField.initialValue !== nextField.initialValue ||
+      this.props.validateStatus !== nextProps.validateStatus ||
+      this.props.help !== nextProps.help
     // 我不知道为什么在这里this.state为null
     // 而且this.state.helpShow跑到了this里
     // 之前写的this.state.helpShow !== nextState.helpShow会抛空指针异常

@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { Checkbox } from 'antd'
 import { formBaseCompare, shallowCompareArr } from '../utils/compare'
+
 const CheckboxGroup = Checkbox.Group
 
+export { Checkbox } from 'antd'
 
 class CheckboxGroupWrapper extends Component {
   shouldComponentUpdate(nextProps) {
