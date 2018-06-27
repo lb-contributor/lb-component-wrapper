@@ -7,6 +7,7 @@ const FIELD_DATA_PROP = 'data-__field'
 const VALUE = 'value'
 const OPTIONS = 'options'
 const CHECKED = 'checked'
+const DISABLED = 'disabled'
 
 
 export class SimpleFormItem extends Form.Item {
@@ -28,6 +29,7 @@ export class SimpleFormItem extends Form.Item {
       this.newGetChildProps(this.props, VALUE) !== this.newGetChildProps(nextProps, VALUE) ||
       this.newGetChildProps(this.props, OPTIONS) !== this.newGetChildProps(nextProps, OPTIONS) ||
       this.newGetChildProps(this.props, CHECKED) !== this.newGetChildProps(nextProps, CHECKED) ||
+      this.newGetChildProps(this.props, DISABLED) !== this.newGetChildProps(nextProps, DISABLED) ||
       currField.validating !== nextField.validating ||
       currField.value !== nextField.value ||
       currField.errors !== nextField.errors ||
