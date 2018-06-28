@@ -4,8 +4,6 @@ import { formBaseCompare, shallowCompareArr } from '../utils/compare'
 
 const CheckboxGroup = Checkbox.Group
 
-export { Checkbox } from 'antd'
-
 class CheckboxGroupWrapper extends Component {
   shouldComponentUpdate(nextProps) {
     return !formBaseCompare(this.props, nextProps) ||
