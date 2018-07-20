@@ -1,4 +1,4 @@
 import { Tree } from 'antd'
 
-export const { TreeNode } = Tree
+export const { TreeNode, DirectoryTree } = Tree
 export default Tree
