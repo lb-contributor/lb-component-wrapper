@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/lb-contributor/lb-component-wrapper#readme",
   "dependencies": {
-    "antd": "^3.4.1",
+    "antd": "^3.7.0",
     "prop-types": "^15.6.1",
     "react": "^16.3.2"
   },
