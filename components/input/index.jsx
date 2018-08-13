@@ -9,8 +9,12 @@ class InputWrapper extends Component {
     return !formBaseCompare(this.props, nextProps)
   }
 
+  focus = () => {
+    this.r.focus()
+  }
+
   render() {
-    return (<Input {...this.props} />)
+    return (<Input {...this.props} ref={r => this.r = r} />)
   }
 }
 
