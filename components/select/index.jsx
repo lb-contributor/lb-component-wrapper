@@ -26,7 +26,7 @@ class SelectWrapper extends Component {
     return options ? (
       <Select {...props}>
         {
-          options.map(o => (<Select.Option {...o}>{o.title}</Select.Option>))
+          options.map(o => (<Select.Option {...o}>{o.label || o.title}</Select.Option>))
         }
       </Select>
     ) : (<Select {...this.props} />)
