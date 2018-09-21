@@ -1,11 +1,11 @@
 {
   "name": "lbc-wrapper",
-  "version": "0.0.36",
+  "version": "1.0.0",
   "description": "components wrapper for lb project",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel components --out-dir lib --extensions .js,.jsx",
+    "build": "tsc",
     "publish:patch": "npm version patch && npm publish",
     "publish:minor": "npm version minor && npm publish"
   },
@@ -41,6 +41,7 @@
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.7.0"
+    "eslint-plugin-react": "^7.7.0",
+    "tslint": "^5.11.0"
   }
 }

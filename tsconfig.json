@@ -13,7 +13,9 @@
       "dom",
       "es7"
     ],
-    "outDir": "lib"
+    "module": "commonJS",
+    "outDir": "lib",
+    "rootDir": "components"
   },
   "include": [
     "components/**/*"

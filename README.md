@@ -1,5 +1,7 @@
 # LB-COMPONENT-WRAPPER
 
+1.0.0 is developed via TypeScript
+
 公共组件的包装层，现在是包装antd
 
 ``` shell
