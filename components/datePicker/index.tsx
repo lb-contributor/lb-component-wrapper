@@ -1,4 +1,4 @@
-import DatePicker from 'antd/es/date-picker/WeekPicker'
+import DatePicker from 'antd/es/date-picker'
 import 'antd/es/date-picker/style'
 import MonthPicker from './month-picker'
 import RangePicker from './range-picker'

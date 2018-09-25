@@ -11,8 +11,7 @@ export interface SelectPropsLB extends SelectProps {
   options: SelectOptionLB[];
 }
 
-export const Optoin: React.SFC<SelectOptionLB> = (props) => (<Select.Option {...props} />)
-
+export const Option: React.SFC<SelectOptionLB> = (props) => (<Select.Option {...props} />)
 class SelectWrapper extends React.Component<SelectPropsLB, any> {
   shouldComponentUpdate(nextProps: SelectPropsLB) {
     return !formBaseCompare(this.props, nextProps) ||
@@ -20,15 +19,15 @@ class SelectWrapper extends React.Component<SelectPropsLB, any> {
   }
 
   render() {
-    const { options, ...props } = this.props
+    const { options = [], ...props } = this.props
 
-    return options ? (
+    return (
       <Select {...props}>
         {
-          options.map(o => (<Optoin {...o}>{o.label || o.title}</Optoin>))
+          options.map(o => (<Option {...o}>{o.label || o.title}</Option>))
         }
       </Select>
-    ) : (<Select {...this.props} />)
+    )
   }
 }
 
