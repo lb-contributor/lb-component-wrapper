@@ -1,7 +1,8 @@
 import Form, { FormItemProps } from 'antd/es/form';
+import Item from 'antd/es/form/FormItem';
 import 'antd/es/form/style';
 export { FormProps, FormComponentProps, FormCreateOption, ValidateCallback, ValidationRule, FormItemProps } from 'antd/es/form';
-export declare const Item: typeof import("antd/es/form/FormItem").default;
+export { Item };
 export declare class SimpleFormItem extends Form.Item {
     lastHelpShow: boolean;
     shouldComponentUpdate(nextProps: FormItemProps & {

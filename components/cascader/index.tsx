@@ -2,7 +2,11 @@ import * as React from 'react'
 import Cascader, { CascaderProps } from 'antd/es/cascader'
 import 'antd/es/cascader/style'
 
-class CascaderWrapper extends React.Component<CascaderProps, any> {
+export interface CascaderPropsLB extends CascaderProps {
+  // nothing
+}
+
+class LBCascader extends React.Component<CascaderPropsLB, any> {
   // FIXME 补充完整的刷新条件
   shouldComponentUpdate(): boolean {
     return true
@@ -13,4 +17,4 @@ class CascaderWrapper extends React.Component<CascaderProps, any> {
   }
 }
 
-export default CascaderWrapper
+export default LBCascader

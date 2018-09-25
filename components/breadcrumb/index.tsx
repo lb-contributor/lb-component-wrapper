@@ -1,5 +1,6 @@
-import Breadcrumb from 'antd/es/breadcrumb'
+import Breadcrumb, { BreadcrumbPropsLB } from './breadcrumb'
+import BreadcrumbItem, { BreadcrumbItemPropsLB } from './breadcrumbItem'
 import 'antd/es/breadcrumb/style'
 
-export const { Item } = Breadcrumb
+export { BreadcrumbItem, BreadcrumbPropsLB, BreadcrumbItemPropsLB, BreadcrumbItem as Item }
 export default Breadcrumb

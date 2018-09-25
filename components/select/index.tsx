@@ -1,20 +1,20 @@
 import * as React from 'react'
-import Select, { SelectProps } from 'antd/es/select'
+import Select, { SelectProps, OptionProps } from 'antd/es/select'
 import { formBaseCompare, shallowCompareArr } from '../utils/compare'
 import 'antd/es/select/style'
 
-export interface SelectOption {
+export interface SelectOptionLB extends OptionProps {
   label?: string;
-  title?: string;
-  value: any;
   key: string;
 }
-interface SelectWrapperProps extends SelectProps {
-  options: SelectOption[];
+export interface SelectPropsLB extends SelectProps {
+  options: SelectOptionLB[];
 }
 
-class SelectWrapper extends React.Component<SelectWrapperProps, any> {
-  shouldComponentUpdate(nextProps: SelectWrapperProps) {
+export const Optoin: React.SFC<SelectOptionLB> = (props) => (<Select.Option {...props} />)
+
+class SelectWrapper extends React.Component<SelectPropsLB, any> {
+  shouldComponentUpdate(nextProps: SelectPropsLB) {
     return !formBaseCompare(this.props, nextProps) ||
       !shallowCompareArr(this.props.options, nextProps.options)
   }
@@ -25,7 +25,7 @@ class SelectWrapper extends React.Component<SelectWrapperProps, any> {
     return options ? (
       <Select {...props}>
         {
-          options.map(o => (<Select.Option {...o}>{o.label || o.title}</Select.Option>))
+          options.map(o => (<Optoin {...o}>{o.label || o.title}</Optoin>))
         }
       </Select>
     ) : (<Select {...this.props} />)
@@ -33,4 +33,3 @@ class SelectWrapper extends React.Component<SelectWrapperProps, any> {
 }
 
 export default SelectWrapper
-export const { Option } = Select

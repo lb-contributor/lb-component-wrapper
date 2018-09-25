@@ -1,8 +1,9 @@
 import Form, { FormItemProps } from 'antd/es/form'
+import Item from 'antd/es/form/FormItem'
 import 'antd/es/form/style'
 
 export { FormProps, FormComponentProps, FormCreateOption, ValidateCallback, ValidationRule, FormItemProps } from 'antd/es/form'
-export const { Item } = Form
+export { Item }
 
 const FIELD_META_PROP = 'data-__meta'
 const FIELD_DATA_PROP = 'data-__field'

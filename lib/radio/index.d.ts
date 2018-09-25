@@ -1,5 +1,10 @@
-import Radio from 'antd/es/radio';
+import * as React from 'react';
+import Radio, { RadioProps, RadioGroupProps, RadioChangeEvent, RadioChangeEventTarget, RadioGroupButtonStyle } from 'antd/es/radio';
+import { RadioButtonProps } from 'antd/es/radio/radioButton';
 import 'antd/es/radio/style';
-export declare const RadioGroup: typeof import("antd/es/radio/group").default;
-export declare const RadioButton: typeof import("antd/es/radio/radioButton").default;
+export interface RadioPropsLB extends RadioProps {
+}
+export { RadioChangeEvent, RadioChangeEventTarget, RadioGroupButtonStyle };
+export declare const RadioGroup: React.SFC<RadioGroupProps>;
+export declare const RadioButton: React.SFC<RadioButtonProps>;
 export default Radio;

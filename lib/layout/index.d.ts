@@ -1,6 +1,11 @@
-/// <reference types="react" />
-import Layout from 'antd/es/layout';
+import * as React from 'react';
+import Layout, { LayoutProps } from 'antd/es/layout';
+import Sider, { SiderPropsLB, CollapseType, SiderTheme } from './sider';
 import 'antd/es/layout/style';
-export { LayoutProps, SiderProps } from 'antd/es/layout';
-export declare const Header: import("react").ComponentClass<LayoutProps, any>, Sider: import("react").ComponentClass<SiderProps, any>, Content: import("react").ComponentClass<LayoutProps, any>, Footer: import("react").ComponentClass<LayoutProps, any>;
+export interface LayoutPropsLB extends LayoutProps {
+}
+declare const Header: React.SFC<LayoutPropsLB>;
+declare const Footer: React.SFC<LayoutPropsLB>;
+declare const Content: React.SFC<LayoutPropsLB>;
+export { Header, Footer, Content, Sider, SiderPropsLB, CollapseType, SiderTheme };
 export default Layout;

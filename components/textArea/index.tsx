@@ -1,12 +1,13 @@
 import * as React from 'react'
-import Input from 'antd/es/input'
+import TextArea, { TextAreaProps } from 'antd/es/input/TextArea'
 import 'antd/es/input/style'
 import { formBaseCompare } from '../utils/compare'
 
-const { TextArea } = Input
-
-class TextAreaWrapper extends React.Component<any, any> {
-  shouldComponentUpdate(nextProps: any) {
+export interface TextAreaPropsLB extends TextAreaProps {
+  // nothing
+}
+class TextAreaWrapper extends React.Component<TextAreaProps, any> {
+  shouldComponentUpdate(nextProps: TextAreaProps) {
     return !formBaseCompare(this.props, nextProps)
   }
 

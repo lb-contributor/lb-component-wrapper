@@ -21,10 +21,14 @@ export function shallowCompareObj(curr: object, next: object): boolean {
 
   return true
 }
-
-export function shallowCompareArr(curr: any[], next: any[]): boolean {
+type commonProps = any[] | string | undefined
+export function shallowCompareArr(curr: commonProps = [], next: commonProps = []): boolean {
   if (curr === next) {
     return true
+  }
+
+  if (typeof curr === 'string' || typeof next === 'string') {
+    return curr === next
   }
 
   if (curr != null && next != null) {

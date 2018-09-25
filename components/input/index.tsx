@@ -3,11 +3,14 @@ import Input, { InputProps } from 'antd/es/input'
 import 'antd/es/input/style'
 import { formBaseCompare } from '../utils/compare'
 
-export { InputProps, GroupProps, SearchProps, TextAreaProps } from 'antd/es/input'
+import Search, { SearchPropsLB } from './search'
+import Group, { GroupPropsLB } from './group'
 
-export const { Search, Group } = Input
-export const OriginalInput = Input
-class InputWrapper extends React.Component<InputProps, any> {
+export interface InputPropsLB extends InputProps {
+  // nothing
+}
+
+class InputWrapper extends React.Component<InputPropsLB, any> {
   private r: Input | null
 
   shouldComponentUpdate(nextProps: InputProps) {
@@ -22,5 +25,7 @@ class InputWrapper extends React.Component<InputProps, any> {
     return (<Input {...this.props} ref={r => this.r = r} />)
   }
 }
+
+export { Search, SearchPropsLB, Group, GroupPropsLB }
 
 export default InputWrapper

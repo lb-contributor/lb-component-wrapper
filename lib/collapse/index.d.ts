@@ -1,6 +1,7 @@
-import Collapse from 'antd/es/collapse';
+import Collapse, { CollapseProps } from 'antd/es/collapse';
+import CollapsePanel, { CollapsePanelPropsLB } from './collapse-panel';
 import 'antd/es/collapse/style';
-export declare const Panel: typeof import("antd/es/collapse/CollapsePanel").default;
-export { CollapseProps } from 'antd/es/collapse';
-export { CollapsePanelProps } from 'antd/es/collapse';
+export interface CollapsePropsLB extends CollapseProps {
+}
+export { CollapsePanelPropsLB, CollapsePanel, CollapsePanel as Panel };
 export default Collapse;

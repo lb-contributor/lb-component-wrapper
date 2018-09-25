@@ -1,18 +1,8 @@
-import * as React from 'react'
-import DatePicker from 'antd/es/date-picker'
+import DatePicker from 'antd/es/date-picker/WeekPicker'
 import 'antd/es/date-picker/style'
+import MonthPicker from './month-picker'
+import RangePicker from './range-picker'
+import WeekPicker from './week-picker'
 
-export const { MonthPicker, RangePicker, WeekPicker } = DatePicker
-
-class DatePickerWrapper extends React.Component {
-  // FIXME 补充完整的刷新条件
-  shouldComponentUpdate(): boolean {
-    return true
-  }
-
-  render() {
-    return (<DatePicker {...this.props} />)
-  }
-}
-
-export default DatePickerWrapper
+export { MonthPicker, RangePicker, WeekPicker }
+export default DatePicker

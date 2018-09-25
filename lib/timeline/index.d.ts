@@ -1,5 +1,9 @@
-/// <reference types="react" />
-import Timeline from 'antd/es/timeline';
+import Timeline, { TimelineProps } from 'antd/es/timeline/';
+import Item, { TimeLineItemProps } from 'antd/es/timeline/TimelineItem';
 import 'antd/es/timeline/style';
-export declare const Item: import("react").ClassicComponentClass<import("antd/es/timeline/TimelineItem").TimeLineItemProps>;
+export interface TimelinePropsLB extends TimelineProps {
+}
+export interface TimeLineItemPropsLB extends TimeLineItemProps {
+}
+export { Item };
 export default Timeline;

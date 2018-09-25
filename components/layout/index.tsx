@@ -1,7 +1,16 @@
-import Layout from 'antd/es/layout'
+import * as React from 'react'
+import Layout, { LayoutProps } from 'antd/es/layout'
+import Sider, { SiderPropsLB, CollapseType, SiderTheme } from './sider'
 import 'antd/es/layout/style'
 
-export { LayoutProps, SiderProps } from 'antd/es/layout'
+export interface LayoutPropsLB extends LayoutProps {
+  // nothing
+}
 
-export const { Header, Sider, Content, Footer } = Layout
+const Header: React.SFC<LayoutPropsLB> = (props) => (<Layout.Header {...props} />)
+const Footer: React.SFC<LayoutPropsLB> = (props) => (<Layout.Footer {...props} />)
+const Content: React.SFC<LayoutPropsLB> = (props) => (<Layout.Content {...props} />)
+
+export { Header, Footer, Content, Sider, SiderPropsLB, CollapseType, SiderTheme }
+
 export default Layout

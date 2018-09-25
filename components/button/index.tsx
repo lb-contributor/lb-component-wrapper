@@ -1,28 +1,13 @@
-import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import Button, { ButtonProps } from 'antd/es/button'
+import Button, { ButtonPropsLB } from './button'
+import ButtonGroup, { ButtonGroupPropsLB } from './button-group'
 import 'antd/es/button/style'
 
-export { ButtonProps, ButtonShape, ButtonSize, ButtonType, ButtonGroupProps } from 'antd/es/button'
-export type ButtonWrapperProps = ButtonProps & { disabled?: boolean }
+export { ButtonShape, ButtonSize, ButtonType } from 'antd/es/button'
 
-class ButtonWrapper extends React.Component<ButtonWrapperProps, any> {
-  static propTypes = {
-    disabled: PropTypes.bool,
-    loading: PropTypes.bool,
-    onClick: PropTypes.func,
-  }
-
-  shouldComponentUpdate(nextProps: ButtonWrapperProps): boolean {
-    return this.props.disabled !== nextProps.disabled ||
-      this.props.loading !== nextProps.loading ||
-      this.props.onClick !== nextProps.onClick
-  }
-
-  render() {
-    return <Button {...this.props} />
-  }
+export {
+  ButtonGroup,
+  ButtonPropsLB,
+  ButtonGroupPropsLB,
 }
 
-export default ButtonWrapper
-export const ButtonGroup = Button.Group
+export default Button
