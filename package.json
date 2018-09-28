@@ -1,6 +1,6 @@
 {
   "name": "lbc-wrapper",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "components wrapper for lb project",
   "main": "lib/index.js",
   "scripts": {

@@ -1,9 +1,10 @@
 import Form, { FormItemProps } from 'antd/es/form'
+import { GetFieldDecoratorOptions } from 'antd/es/form/Form'
 import Item from 'antd/es/form/FormItem'
 import 'antd/es/form/style'
 
 export { FormProps, FormComponentProps, FormCreateOption, ValidateCallback, ValidationRule, FormItemProps } from 'antd/es/form'
-export { Item }
+export { Item, GetFieldDecoratorOptions }
 
 const FIELD_META_PROP = 'data-__meta'
 const FIELD_DATA_PROP = 'data-__field'
