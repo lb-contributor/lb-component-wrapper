@@ -28,4 +28,6 @@ class InputWrapper extends React.Component<InputPropsLB, any> {
 
 export { Search, SearchPropsLB, Group, GroupPropsLB }
 
+export const OriginalInput = Input
+
 export default InputWrapper

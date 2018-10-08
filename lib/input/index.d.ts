@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { InputProps } from 'antd/es/input';
+import Input, { InputProps } from 'antd/es/input';
 import 'antd/es/input/style';
 import Search, { SearchPropsLB } from './search';
 import Group, { GroupPropsLB } from './group';
@@ -12,4 +12,5 @@ declare class InputWrapper extends React.Component<InputPropsLB, any> {
     render(): JSX.Element;
 }
 export { Search, SearchPropsLB, Group, GroupPropsLB };
+export declare const OriginalInput: typeof Input;
 export default InputWrapper;
