@@ -8,9 +8,10 @@ export interface SelectOptionLB extends OptionProps {
   key: string;
 }
 export interface SelectPropsLB extends SelectProps {
-  options: SelectOptionLB[];
+  options?: SelectOptionLB[];
 }
 
+// export const Option = Select.Option
 export const Option: React.SFC<SelectOptionLB> = (props) => (<Select.Option {...props} />)
 class SelectWrapper extends React.Component<SelectPropsLB, any> {
   shouldComponentUpdate(nextProps: SelectPropsLB) {
@@ -19,15 +20,21 @@ class SelectWrapper extends React.Component<SelectPropsLB, any> {
   }
 
   render() {
-    const { options = [], ...props } = this.props
+    const { options, ...props } = this.props
 
-    return (
-      <Select {...props}>
-        {
-          options.map(o => (<Option {...o}>{o.label || o.title}</Option>))
-        }
-      </Select>
-    )
+    if (options) {
+      return (
+        <Select {...props}>
+          {
+            options.map(o => (<Option {...o}>{o.label || o.title}</Option>))
+          }
+        </Select>
+      )
+    } else {
+      return <Select {...this.props} />
+    }
+
+
   }
 }
 

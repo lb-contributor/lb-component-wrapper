@@ -6,7 +6,7 @@ export interface SelectOptionLB extends OptionProps {
     key: string;
 }
 export interface SelectPropsLB extends SelectProps {
-    options: SelectOptionLB[];
+    options?: SelectOptionLB[];
 }
 export declare const Option: React.SFC<SelectOptionLB>;
 declare class SelectWrapper extends React.Component<SelectPropsLB, any> {
