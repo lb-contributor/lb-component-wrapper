@@ -11,8 +11,8 @@ export interface SelectPropsLB extends SelectProps {
   options?: SelectOptionLB[];
 }
 
-// export const Option = Select.Option
-export const Option: React.SFC<SelectOptionLB> = (props) => (<Select.Option {...props} />)
+export const Option = Select.Option
+// export const Option: React.SFC<SelectOptionLB> = (props) => (<Select.Option {...props} />)
 class SelectWrapper extends React.Component<SelectPropsLB, any> {
   shouldComponentUpdate(nextProps: SelectPropsLB) {
     return !formBaseCompare(this.props, nextProps) ||
