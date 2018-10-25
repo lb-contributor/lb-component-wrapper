@@ -4,6 +4,7 @@ import Item from 'antd/es/form/FormItem';
 import 'antd/es/form/style';
 export { FormProps, FormComponentProps, FormCreateOption, ValidateCallback, ValidationRule, FormItemProps } from 'antd/es/form';
 export { Item, GetFieldDecoratorOptions };
+export { WrappedFormUtils } from 'antd/es/form/Form';
 export declare class SimpleFormItem extends Form.Item {
     lastHelpShow: boolean;
     shouldComponentUpdate(nextProps: FormItemProps & {

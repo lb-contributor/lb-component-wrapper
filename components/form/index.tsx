@@ -5,6 +5,7 @@ import 'antd/es/form/style'
 
 export { FormProps, FormComponentProps, FormCreateOption, ValidateCallback, ValidationRule, FormItemProps } from 'antd/es/form'
 export { Item, GetFieldDecoratorOptions }
+export { WrappedFormUtils } from 'antd/es/form/Form'
 
 const FIELD_META_PROP = 'data-__meta'
 const FIELD_DATA_PROP = 'data-__field'
