@@ -4,5 +4,7 @@ import MonthPicker from './month-picker'
 import RangePicker from './range-picker'
 import WeekPicker from './week-picker'
 
+export * from 'antd/es/date-picker/interface'
+
 export { MonthPicker, RangePicker, WeekPicker }
 export default DatePicker
