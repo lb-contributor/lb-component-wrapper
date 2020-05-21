@@ -12,11 +12,11 @@ export interface MenuPropsLB extends MenuProps {
 
 class MenuWrapper extends React.Component<MenuPropsLB, any> {
   // FIXME 补充完整的刷新条件
-  shouldComponentUpdate() {
+  public shouldComponentUpdate() {
     return true
   }
 
-  render() {
+  public render() {
     return (<Menu {...this.props} />)
   }
 }

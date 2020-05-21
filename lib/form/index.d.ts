@@ -6,7 +6,7 @@ export { FormProps, FormComponentProps, FormCreateOption, ValidateCallback, Vali
 export { Item, GetFieldDecoratorOptions };
 export { WrappedFormUtils } from 'antd/es/form/Form';
 export declare class SimpleFormItem extends Form.Item {
-    lastHelpShow: boolean;
+    private lastHelpShow;
     shouldComponentUpdate(nextProps: FormItemProps & {
         willChange: any[];
     }): boolean;

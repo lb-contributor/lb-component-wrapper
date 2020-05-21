@@ -11,12 +11,12 @@ export interface CheckboxGroupPropsLB extends CheckboxGroupProps {
 }
 
 class CheckboxGroupWrapper extends React.Component<CheckboxGroupPropsLB, any> {
-  shouldComponentUpdate(nextProps: CheckboxGroupPropsLB) {
+  public shouldComponentUpdate(nextProps: CheckboxGroupPropsLB) {
     return !formBaseCompare(this.props, nextProps) ||
       !shallowCompareArr(this.props.options, nextProps.options)
   }
 
-  render() {
+  public render() {
     return (<CheckboxGroup {...this.props} />)
   }
 }

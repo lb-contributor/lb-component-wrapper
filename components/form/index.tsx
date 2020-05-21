@@ -15,8 +15,8 @@ const CHECKED = 'checked'
 const DISABLED = 'disabled'
 
 export class SimpleFormItem extends Form.Item {
-  lastHelpShow: boolean;
-  shouldComponentUpdate(nextProps: FormItemProps & { willChange: any[] }) {
+  private lastHelpShow: boolean;
+  public shouldComponentUpdate(nextProps: FormItemProps & { willChange: any[] }) {
     const currField = this.newGetField(this.props)
     const nextField = this.newGetField(nextProps)
 
@@ -50,14 +50,14 @@ export class SimpleFormItem extends Form.Item {
     return ret
   }
 
-  newGetChildProps = (props: any, prop: string) => {
+  public newGetChildProps = (props: any, prop: string) => {
     const child = this.getControls(props.children, false)[0]
     return child && child.props && child.props[prop]
   }
 
-  newGetMeta = (props: any) => this.newGetChildProps(props, FIELD_META_PROP)
+  public newGetMeta = (props: any) => this.newGetChildProps(props, FIELD_META_PROP)
 
-  newGetField = (props: any) => this.newGetChildProps(props, FIELD_DATA_PROP)
+  public newGetField = (props: any) => this.newGetChildProps(props, FIELD_DATA_PROP)
 }
 
 export default Form

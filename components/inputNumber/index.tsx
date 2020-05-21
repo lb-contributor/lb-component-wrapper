@@ -9,11 +9,11 @@ export interface InputNumberPropsLB extends InputNumberProps {
 
 class InputWrapper extends React.Component<InputNumberPropsLB, any> {
   // FIXME 添加完整的刷新条件
-  shouldComponentUpdate(nextProps: InputNumberPropsLB) {
+  public shouldComponentUpdate(nextProps: InputNumberPropsLB) {
     return !formBaseCompare(this.props, nextProps)
   }
 
-  render() {
+  public render() {
     return (<InputNumber {...this.props} />)
   }
 }

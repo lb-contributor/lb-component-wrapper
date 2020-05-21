@@ -1,9 +1,7 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { ButtonProps } from 'antd/es/button';
-export declare type ButtonPropsLB = ButtonProps & {
-    disabled?: boolean;
-};
+import { AnchorButtonProps, NativeButtonProps } from 'antd/es/button/button';
+export declare type ButtonPropsLB = Partial<AnchorButtonProps & NativeButtonProps>;
 declare class LBButton extends React.Component<ButtonPropsLB, any> {
     static propTypes: {
         disabled: PropTypes.Requireable<boolean>;

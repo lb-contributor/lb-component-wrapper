@@ -13,15 +13,17 @@ export interface InputPropsLB extends InputProps {
 class InputWrapper extends React.Component<InputPropsLB, any> {
   private r: Input | null
 
-  shouldComponentUpdate(nextProps: InputProps) {
+  public shouldComponentUpdate(nextProps: InputProps) {
     return !formBaseCompare(this.props, nextProps)
   }
 
-  focus() {
-    this.r && this.r.focus()
+  public focus() {
+    if(this.r) {
+      this.r.focus()
+    }
   }
 
-  render() {
+  public render() {
     return (<Input {...this.props} ref={r => this.r = r} />)
   }
 }

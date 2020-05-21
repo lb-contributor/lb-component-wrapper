@@ -7,11 +7,11 @@ export interface TextAreaPropsLB extends TextAreaProps {
   // nothing
 }
 class TextAreaWrapper extends React.Component<TextAreaProps, any> {
-  shouldComponentUpdate(nextProps: TextAreaProps) {
+  public shouldComponentUpdate(nextProps: TextAreaProps) {
     return !formBaseCompare(this.props, nextProps)
   }
 
-  render() {
+  public render() {
     return (<TextArea {...this.props} />)
   }
 }

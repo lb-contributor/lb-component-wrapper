@@ -7,7 +7,9 @@
     ],
     "jsRules": {},
     "rules": {
-        "ordered-imports": false
+        "ordered-imports": false,
+        "interface-name": [true, "never-prefix"],
+        "no-empty-interface": false
     },
     "rulesDirectory": []
 }

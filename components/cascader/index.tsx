@@ -10,11 +10,11 @@ export { CascaderOptionType }
 
 class LBCascader extends React.Component<CascaderPropsLB, any> {
   // FIXME 补充完整的刷新条件
-  shouldComponentUpdate(): boolean {
+  public shouldComponentUpdate(): boolean {
     return true
   }
 
-  render() {
+  public render() {
     return (<Cascader {...this.props} />)
   }
 }
