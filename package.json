@@ -1,6 +1,6 @@
 {
   "name": "lbc-wrapper",
-  "version": "1.0.11",
+  "version": "2.0.0",
   "description": "components wrapper for lb project",
   "main": "lib/index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/lb-contributor/lb-component-wrapper#readme",
   "dependencies": {
-    "antd": "3.8.4",
+    "antd": "^3.26.17",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "tslint-config-prettier": "^1.18.0",

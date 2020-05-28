@@ -1,9 +1,9 @@
 import * as React from 'react'
 import * as PropTypes from 'prop-types'
-import Button from 'antd/es/button'
-import {AnchorButtonProps, NativeButtonProps} from 'antd/es/button/button'
+import Button, { ButtonProps } from 'antd/es/button'
+// import {AnchorButtonProps, NativeButtonProps} from 'antd/es/button/button'
 
-export type ButtonPropsLB = Partial<AnchorButtonProps & NativeButtonProps>
+export type ButtonPropsLB = ButtonProps
 
 class LBButton extends React.Component<ButtonPropsLB, any> {
   public static propTypes = {
